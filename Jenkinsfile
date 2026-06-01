@@ -16,10 +16,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh '''
-                    python3 -m pip3 install --upgrade pip3
-                    if [ -f requirements.txt ]; then
-                        pip3 install -r requirements.txt
-                    fi
+                    python3 -m pip install --upgrade pip
+                    pip3 install -r requirements.txt
                 '''
             }
         }
