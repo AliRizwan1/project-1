@@ -27,6 +27,7 @@ pipeline {
     post {
         success {
             echo 'Python script executed successfully.'
+            git branch: 'main', poll: false, url: 'https://github.com/AliRizwan1/project-1'
         }
         failure {
             echo 'Pipeline failed.'
